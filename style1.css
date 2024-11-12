@@ -309,8 +309,17 @@ footer {
     margin-top: -20px;
   }
 
-  .productos-container {
-    flex-direction: column;
-    align-items: center;
-  }
+/* Productos Destacados */
+.productos-container {
+  display: flex;
+  justify-content: center; /* Centramos los productos */
+  flex-direction: column; /* Hacemos que se apilen verticalmente */
+  align-items: center;
+  gap: 20px; /* Espacio entre los productos */
+}
+
+.producto {
+  width: 90%; /* Ajustamos el ancho para que se adapte mejor en móvil */
+  max-width: 250px; /* Limitamos el ancho máximo */
+}
 }
