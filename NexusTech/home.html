@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - NexusTech S.A.S.</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <img src="logo.png" alt="NexusTech Logo">
+    <div class="navbar-links" id="navbar-links">
+      <a href="home-en.html" class="language-switch es-active">
+        <span class="language-option">EN</span>
+        <span class="language-option">ES</span>
+      </a>
+      <a href="home.html">Home</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="comprar.html">Comprar</a>
+    </div>
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+  </div>
+
+  <!-- Overlay for page when menu is open -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Slideshow Section -->
+  <div class="slideshow-container">
+    <div class="slide-wrapper">
+      <div class="mySlides">
+        <a href="home.html">
+          <img src="logogris.png" alt="Slide 1">
+        </a>       
+      </div>
+      <div class="mySlides">
+        <a href="comprar.html">
+          <img src="comprar.jpeg" alt="Slide 3">
+        </a>
+       
+      </div>
+      <div class="mySlides">
+        <a href="nosotros.html">
+          <img src="nosotros.jpeg" alt="Slide 4">
+        </a>
+      </div>
+      <div class="mySlides">
+        <a href="contacto.html">
+          <img src="contacto.jpg" alt="Slide 2">
+        </a>
+      
+      </div>
+    </div>
+  </div>
+
+  <!-- Dot navigation positioned below slideshow -->
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(0)"></span>
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <!-- Productos Destacados Section -->
+  <div class="productos-destacados" id="loimport">
+    <h2>Productos Destacados</h2>
+    <div class="productos-container">
+      <a href="llamador.html" class="producto">
+        <img src="llamador.jpeg" alt="Producto 1">
+        <h3>Llamador para pacientes</h3>
+        <p>Para los pacientes.</p>
+      </a>
+      <a href="corestation.html" class="producto">
+        <img src="corest.jpeg" alt="Producto 2">
+        <h3>Core Station</h3>
+        <p>Para el personal médico.</p>
+      </a>
+      <a href="medicall.html" class="producto">
+        <img src="producto3.jpeg" alt="Producto 3">
+        <h3>Medicall Band</h3>
+        <p>Para los enfermeros.</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 NexusTech S.A.S. Todos los derechos reservados.</p>
+      <a href="https://www.instagram.com/nexustechsas/" target="_blank" class="ig-button">
+        <img src="insta.png" alt="Instagram" />
+      </a>
+    </div>
+  </footer>
+  <!-- JavaScript for Slideshow and Menu Toggle -->
+  <script src="script.js"></script>
+
+</body>
+</html>
