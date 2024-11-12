@@ -1,0 +1,325 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.navbar img {
+  max-width: 150px;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos del botón de cambio de idioma */
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 5px;
+  width: 60px;
+  height: 30px;
+  position: relative;
+}
+
+/* Estilos de las opciones EN y ES */
+.language-option {
+  width: 50%;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 14px;
+  color: #000;
+  transition: color 0.3s;
+}
+
+/* Resaltado para "ES" activo */
+.es-active::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right:3px;
+  width: 50%;
+  height: calc(100% - 6px);
+  background-color: #000;
+  border-radius: 20px;
+
+}
+
+.es-active .language-option:last-child {
+  color: #fff;
+}
+
+.en-active::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 50%;
+  height: calc(100% - 6px);
+  background-color: #000;
+  border-radius: 20px;
+  
+}
+
+/* Botón menú sándwich */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mostrar botón menú en pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Estilos para el menú móvil */
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    width: 70%;
+    height: 100%;
+    padding-top: 60px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  /* Mayor separación entre los elementos del menú móvil */
+  .navbar-links a {
+    padding: 15px;
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  .language-switch{
+    padding: 15px;
+    margin: 5px 0;
+    left: 32%;
+    right: 32%;
+  }
+
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* Product Section */
+.product-section {
+  display: flex;
+  flex-direction: row;
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.product-image {
+  flex: 1;
+  max-width: 400px;
+  position: relative;
+  text-align: center;
+}
+
+.product-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product-thumbnails {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.product-thumbnails img {
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 5px;
+}
+
+.product-thumbnails img.active {
+  border-color: #ff0000;
+}
+
+.product-details {
+  flex: 1;
+  padding: 20px;
+}
+
+.product-details h1 {
+ 
+  font-size: 24px;
+}
+
+.product-details p {
+  color: #333;
+  line-height: 1.6;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Espacio entre el texto y el ícono */
+}
+
+.ig-button img {
+  width: 30px; /* Tamaño del ícono */
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.ig-button img:hover {
+  transform: scale(1.1); /* Agrandamiento al pasar el cursor */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #000;
+    padding-top: 60px;
+    z-index: 2;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .product-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-image {
+    margin-bottom: 20px;
+ }
+ footer {
+  padding: 10px;
+  font-size: 14px;
+}
+}
+
+/* Comprar Section */
+.comprar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h2 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.product-info p {
+  color: #333;
+}
+
+
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Producto 1 - NexusTech</title>
+  <link rel="stylesheet" href="style4.css">
+  <script>
+    function changeImage(src, thumbnail) {
+      document.getElementById("main-image").src = src;
+      const thumbnails = document.querySelectorAll(".product-thumbnails img");
+      thumbnails.forEach(img => img.classList.remove("active"));
+      thumbnail.classList.add("active");
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <img src="logo.png" alt="NexusTech Logo">
+    <div class="navbar-links" id="navbar-links">
+      <a href="kitcore.html" class="language-switch en-active">
+        <span class="language-option" id="act">EN</span>
+        <span class="language-option" id="inact">ES</span>
+      </a>
+      <a href="home-en.html">Home</a>
+      <a href="aboutus-en.html">About Us</a>
+      <a href="contact-en.html">Contact</a>
+      <a href="purchase.html">Purchase</a>
+    </div>
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+  </div>
+
+  <!-- Overlay for page when menu is open -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Product Section -->
+  <div class="product-section">
+    <div class="product-image">
+      <img id="main-image" src="producto1.jpeg" alt="Producto 1">
+      <div class="product-thumbnails">
+        <img src="producto1.jpeg" alt="Producto 1" class="active" onclick="changeImage('producto1.jpeg', this)">
+        <img src="corest.jpeg" alt="Producto 1 - Vista Alternativa" onclick="changeImage('corest.jpeg', this)">
+        <img src="llamador.jpeg" alt="Producto 1 - Vista Alternativa" onclick="changeImage('llamador.jpeg', this)">
+        <img src="producto3.jpeg" alt="Producto 1 - Vista Alternativa" onclick="changeImage('producto3.jpeg', this)">
+      </div>
+    </div>
+    <div class="product-details">
+      <h1>Complete Kit</h1>
+      <p>Initial kit to start working with our systems.</p>
+  <p><strong>Price:</strong>$1052</p>
+  <p><strong>Stock:</strong>-.-</p>
+      <!-- Tabla de componentes -->
+      <h2>Products</h2>
+      <table class="component-table">
+        <tr>
+          <th>Product</th>
+          <th>Unities</th>
+        </tr>
+        <tr>
+          <td>Core-Station</td>
+        
+        <td>1 Unity</td>
+      </tr>
+        <tr>
+            <td>Caller</td>
+        
+            <td>25 Unities</td>
+          </tr>
+          <tr>
+            <td>Medicall-Band</td>
+        
+            <td>5 Unities</td>
+          </tr>
+        <!-- Añade más filas según sea necesario -->
+      </table>
+      <div>
+        <button class="buy-button">Purchase</button>
+    </div>
+    </div>
+    
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 NexusTech S.A.S. All rights reserved.</p>
+      <a href="https://www.instagram.com/nexustechsas/" target="_blank" class="ig-button">
+        <img src="insta.png" alt="Instagram" />
+      </a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
