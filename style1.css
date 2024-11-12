@@ -218,9 +218,7 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 20px;
-  left:20%;
-  right: 20%;
+  
 }
 
 .producto {
